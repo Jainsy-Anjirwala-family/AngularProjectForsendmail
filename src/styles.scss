@@ -1,0 +1,57 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.bg-wt-color {
+    background: white;
+}
+
+.marg-t-10{
+    margin-top: 10px !important;
+}
+
+.mrg-lr-50{
+    margin-left: 50px !important;
+    margin-right: 50px !important;
+}
+
+.mrg-90 {
+    margin: 90px !important;
+}
+
+.element-absolute {
+    position: absolute;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.col-wheat{
+    color: wheat;
+}
+
+.element-top{
+    top: 70% !important
+}
+
+.fr{
+    float: right !important;
+}
+
+.marg-per-50{
+    margin-left: 50% !important;
+}
+
+.wth-rem-80{
+    width: 80rem !important;
+}
+
+.marg-90{
+    margin: 0px 90px !important;
+}
+
+.marg-50{
+    margin-top: 50px !important;
+}

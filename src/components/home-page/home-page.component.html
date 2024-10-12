@@ -1,0 +1,39 @@
+@if(homePageObj){
+        <div class="card wth-rem-80 marg-90 marg-50">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-3 col-xs-3 col-xl-3">
+                        <button type="button" class="btn btn-dark" (click)="emitEvent({'eventType':'AddEmail'})"><i class="pi pi-plus"></i></button>
+                    </div>
+                    <div class="col-md-3 col-xs-3 col-xl-3" [hidden]="homePageObj && homePageObj.emailList && homePageObj.emailList.length === 0">
+                        <button type="button" class="btn btn-dark" (click)="emitEvent({'eventType':'submitBtn', 'eventData':homePageObj.emailList })">Submit</button>
+                    </div>
+                </div>
+                @if(homePageObj && homePageObj.emailList && homePageObj.emailList.length > 0){
+                    @for (item of homePageObj.emailList; track item.id) {
+                        <div class="row marg-t-10">
+                            <div class="col-md-4 col-xs-4 col-xl-4">
+                                <label>Email</label>
+                                <input type="text" class="form-control" [(ngModel)]="item.emailInputField">
+                            </div>
+                            @if(item && item.id && item.id === 1){
+                                <div class="col-md-4 col-xs-4 col-xl-4">
+                                    <label>Subject</label>
+                                    <input type="text" class="form-control" [(ngModel)]="item.subjectInputField">
+                                </div>
+                                <div class="col-md-4 col-xs-4 col-xl-4">
+                                    <label>Msg</label>
+                                    <input type="text" class="form-control" [(ngModel)]="item.msgInputField">
+                                </div>
+                            }
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+        @if(homePageObj && homePageObj.showLoader){
+            <div class="spinner-overlay">
+                <p-progressSpinner ariaLabel="loading" ></p-progressSpinner>
+            </div>
+        }
+}
