@@ -13,8 +13,8 @@ export class AppComponent {
   title = 'Jainsy Anjirwala Mail';
 
   constructor( private router: Router, private activatedRoute: ActivatedRoute,private location: Location){
-    if(this.location.path() !== "/home"){
-      this.router.navigateByUrl('/noPage');
-    }
+    // if(this.location.path() !== "/home"){
+    //   this.router.navigateByUrl('/noPage');
+    // }
   }
 }

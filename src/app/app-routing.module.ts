@@ -6,7 +6,8 @@ import { NoPageFoundComponent } from '../components/no-page-found/no-page-found.
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomePageComponent },
-  { path: 'noPage', component: NoPageFoundComponent }
+  { path: 'noPage', component: NoPageFoundComponent },
+  {path: '**', redirectTo: '/noPage'}
 ];
 
 @NgModule({
